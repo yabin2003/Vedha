@@ -1,4 +1,3 @@
-
 // Navbar Toggle for Mobile
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -17,6 +16,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Navbar Show/Hide on Scroll
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll <= 0) {
+        // At the top of the page, show the navbar
+        navbar.classList.remove('scroll-up');
+        navbar.classList.add('scroll-down');
+    } else if (currentScroll > lastScroll) {
+        // Scrolling down, hide the navbar
+        navbar.classList.remove('scroll-down');
+        navbar.classList.add('scroll-up');
+    } else {
+        // Scrolling up, show the navbar
+        navbar.classList.remove('scroll-up');
+        navbar.classList.add('scroll-down');
+    }
+
+    lastScroll = currentScroll;
+});
+
 // WhatsApp Integration
 function openWhatsApp() {
     const name = document.getElementById('name').value;
@@ -33,6 +56,7 @@ function openWhatsApp() {
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     window.open(whatsappURL, "_blank");
 }
+
 function openWhatsAppicon() {
     const name = document.getElementById('name').value;
     const mobile = document.getElementById('mobile').value;
