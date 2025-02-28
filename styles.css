@@ -38,17 +38,20 @@ body {
   justify-content: space-between;
   align-items: center;
   background: var(--primary-color);
-  padding: 10px 20px;
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; 
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.navbar .logo
-{
+.navbar.scroll-up {
+  transform: translateY(-100%); /* Hide navbar when scrolling down */
+}
 
+.navbar.scroll-down {
+  transform: translateY(0); /* Show navbar when scrolling up */
 }
 .navbar .logo .logo-img
 {
@@ -398,11 +401,20 @@ body {
   font-size: 0.9rem;
   color: #ddd;
 }
-.wh-icon
-{
-  width: 30px;
-  height: 50px;
-  margin-left: 330px;
+/* Floating WhatsApp Icon */
+.wh-icon {
+  position: fixed; /* Fix the icon on the screen */
+  bottom: 20px; /* Position it 20px from the bottom */
+  right: 20px; /* Position it 20px from the right */
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  cursor: pointer; /* Add pointer cursor */
+  z-index: 1000; /* Ensure it stays above other content */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.wh-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 
