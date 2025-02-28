@@ -38,8 +38,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background: var(--primary-color);
-  position: fixed; 
   padding: 10px 20px;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -81,8 +81,8 @@ body {
 }
 
 .hamburger .line {
-  width: 25px;
-  height: 3px;
+  width: 35px;
+  height: 6px;
   background: var(--white);
 }
 
@@ -156,7 +156,7 @@ body {
 #features {
   margin-top:3px;
   padding: 80px 20px;
-  background: #fff3e0;
+  background:#bbb591;
   text-align: center;
   
 }
@@ -198,7 +198,7 @@ body {
 #products {
   margin-top:3px;
   padding: 80px 20px;
-  background: #fce4ec;
+  background: #f7eaee;
   text-align: center;
 }
 
@@ -441,6 +441,16 @@ body {
       display: flex;
   }
 
+  .navbar {
+    height: 70px; /* Slightly shorter mobile height */
+    padding: 0 15px;
+  }
+  
+  .navbar .logo .logo-img {
+    width: 100px; /* Smaller logo for mobile */
+  }
+
+
   .feature-item, .product-item {
       flex: 1 1 100%;
   }
@@ -481,3 +491,4 @@ body {
       justify-content: center;
   }
 }
+
