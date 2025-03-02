@@ -78,7 +78,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     const emailSubject = "Product Inquiry";
     const emailBody = `Name: ${name}\nMobile: ${mobile}\nProduct: ${product}`;
-    window.location.href = `mailto:vedhafabricsvbn@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    window.location.href = `mailto:vedhafabricsbvn@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
     // Hide the form and show the thank you message
     document.getElementById('contactForm').style.display = 'none';
