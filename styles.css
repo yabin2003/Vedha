@@ -108,14 +108,16 @@
   
   #hero h1 {
     font-size: 4rem;
-    margin-bottom: 10px;
+    margin-bottom: 10px;
+
     position: relative;
   }
   
   #hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    position: relative;
+    position: relative;
+
   }
   
   #hero p {
@@ -448,7 +450,7 @@
   
   .footer-section p {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.6;
     color: white;
   }
@@ -515,10 +517,18 @@
   
   
   /* Responsive Design */
+
   @media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
+    .nav-links {
+      gap: 20px; 
+  }
+
+  .nav-links li a {
+      font-size: 1.1rem;
+  }
   
     .nav-links {
         display: none;
@@ -586,3 +596,184 @@
     }
   }
   
+/* General Styles for Desktop */
+@media (min-width: 1024px) {
+  /* Hero Section */
+  #hero {
+      padding: 200px 20px; /* Increase padding for larger screens */
+  }
+
+  #hero h1 {
+      font-size: 5rem; /* Larger heading for desktop */
+  }
+
+  #hero h2 {
+      font-size: 3rem; /* Larger subheading for desktop */
+  }
+
+  #hero p {
+      font-size: 1.5rem; /* Larger paragraph text for desktop */
+  }
+
+  /* About Latex Section */
+  #about-latex {
+      padding: 100px 20px; /* Increase padding for desktop */
+  }
+
+  #about-latex h2 {
+      font-size: 3rem; /* Larger heading for desktop */
+  }
+
+  #about-latex p {
+      font-size: 1.5rem; /* Larger paragraph text for desktop */
+  }
+
+  /* Features Section */
+  #features {
+      padding: 100px 20px; /* Increase padding for desktop */
+  }
+
+  #features h2 {
+      font-size: 3rem; /* Larger heading for desktop */
+  }
+
+  .feature-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+      gap: 30px; /* Increase gap between items */
+      max-width: 1200px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the grid */
+  }
+
+  .feature-item {
+      padding: 30px; /* Increase padding for desktop */
+  }
+
+  .feature-item h3 {
+      font-size: 1.75rem; /* Larger heading for desktop */
+  }
+
+  .feature-item p {
+      font-size: 1.25rem; /* Larger paragraph text for desktop */
+  }
+
+  /* Products Section */
+  #products {
+      padding: 100px 20px; /* Increase padding for desktop */
+  }
+
+  #products h2 {
+      font-size: 3rem; /* Larger heading for desktop */
+  }
+
+  .product-list {
+      flex-direction: row; /* Display products in a row for desktop */
+      gap: 30px; /* Increase gap between items */
+      max-width: 1200px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the container */
+  }
+
+  .product-item {
+      flex: 1 1 calc(33.333% - 20px); /* Equal width for 3 items */
+  }
+
+  .product-item h3 {
+      font-size: 1.75rem; /* Larger heading for desktop */
+  }
+
+  .product-item img {
+      height: 300px; /* Increase image height for desktop */
+  }
+
+  /* Cards Section */
+  .cards-section {
+      padding: 4rem 20px; /* Increase padding for desktop */
+  }
+
+  .cards-section h5 {
+      font-size: 2rem; /* Larger heading for desktop */
+  }
+
+  .cards-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+      gap: 30px; /* Increase gap between items */
+      max-width: 1200px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the grid */
+  }
+
+  .card img {
+      height: 250px; /* Increase image height for desktop */
+  }
+
+  .card h6 {
+      font-size: 1.25rem; /* Larger text for desktop */
+  }
+
+  /* Contact Section */
+  #contact {
+      padding: 100px 20px; /* Increase padding for desktop */
+  }
+
+  .form-container {
+      max-width: 600px; /* Wider form for desktop */
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container button {
+      font-size: 1.25rem; /* Larger text for desktop */
+  }
+
+  /* Footer Section */
+  #footer {
+      padding: 60px 20px; /* Increase padding for desktop */
+  }
+
+  .footer-content {
+      max-width: 1200px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the container */
+  }
+
+  .footer-section h3 {
+      font-size: 2.5rem; /* Larger heading for desktop */
+  }
+
+  .footer-section p {
+      font-size: 1.25rem; /* Larger text for desktop */
+  }
+
+  .footer-section iframe {
+      height: 250px; /* Increase map height for desktop */
+  }
+  .navbar {
+    padding: 5px 20px; /* Reduce padding to decrease height */
+    height: 60px; /* Set a fixed height for the navbar */
+}
+
+.navbar .logo .logo-img {
+    height: 50px; /* Adjust logo height to fit the navbar */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    gap: 30px; /* Adjust gap between navbar items */
+}
+
+.nav-links li a {
+    font-size: 1.2rem; /* Adjust font size if needed */
+}
+}
+/* Apply Avenir Next Variable Pro Roman to the entire website */
+* {
+  font-family: 'Avenir Next Variable Pro', sans-serif;
+  font-weight: normal; /* Adjust as needed */
+}
+
+/* Override for specific elements if needed */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; /* Bolder for headings */
+}
+
+button, input, select, textarea {
+  font-family: 'Avenir Next Variable Pro', sans-serif; /* Ensure form elements use the font */
+}
